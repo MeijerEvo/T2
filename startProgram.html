@@ -1,0 +1,89 @@
+<!-- T1 Gateway / -->
+<!-- Ver 4.1 / -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>SYSTEM T2 DASHBOARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="startProgramLoad()">
+
+<div class="content">
+    <div class="card-grid">
+        <div class="card">
+            <p class="card-title" id="programTitle">Program</p>
+          
+         
+            <table class="programsTable" id="programsTable">
+                <tbody>
+                </tbody>
+            </table>
+            
+            <p class="programTimer" id="preProgramTimerTime">--</p>
+            
+           <!--  <table id="counters" width=70% display="table" align="center">
+            <tbody>
+            <tr>
+                <td class="tableData"><p class="programTimer" id="preProgramTimerTime">--</p></td>
+                <td class="tableData"><p class="programTimer" id="preProgramPos">--</p></td>
+            </tr>
+            <tr>
+                <td class="counterText">Räknare</td>
+                <td class="counterText">Totaltid</td>
+            </tr>
+            </tbody>
+            </table>
+            / -->
+   
+
+            
+            
+            <p class="switch">
+                  <progress id="preProgramProgress" value="0" max="100"> 0% </progress>
+            </p> 
+      
+   
+          
+        
+            
+            
+                <p class="switch"><input type="button" class="button" value="STARTA PROGRAM" onclick="preProgramStartStop()" id="preProgramStartStopButton"></p>
+                <p class="switch"><input type="button" class="button" onclick="nextProgram()" value="NÄSTA PROGRAM >" id="nextPrgram"></p> 
+                <p class="switch"><input type="button" class="button" onclick="preProgramExtra()" value="EXTRA" id="preProgramExtra"></p> 
+                <p class="switch"><input type="button" class="buttonRed" onclick="markera()" value="MARKERA" id="markera"></p>
+                <p class="switch"><input type="button" class="buttonRed" onclick="avbryt()" value="AVBRYT!" id="markera"></p>
+                <p class="version" id="latestProgram" ></p>
+               
+              
+            
+                <form>
+                    
+                    <label class="container">Bana vänster 
+                    <input type="checkbox" id="lane1" onclick="lane1Checked()">
+                    <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container"> Bana höger 
+                    <input type="checkbox" id="lane2" onclick="lane2Checked()">
+                    <span class="checkmark"></span>
+                    </label>
+         
+                </form>
+               
+                <p class="switch"><input type="button" class="buttonSmall" id="text" value="TEXT" onclick="showText()"></p> 
+                <p class="switch"><input type="button" class="buttonSmall" value="HEM" onclick="location.href='index.html'"></p> 
+            
+                <br><br />
+        </div>
+    </div>
+</div>
+<p class="version" id="versionText" ></p>
+<br><br />
+<script src="startProgramScript.js"></script>
+</body>
+</html>
