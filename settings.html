@@ -1,0 +1,83 @@
+<!-- T1 Gateway / -->
+<!-- Ver 3.0 / -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SYSTEM T1 DASHBOARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                
+                <p class="card-title" id="hydraulPumpText">Hydraulpump</p> 
+                <p class="switch">
+                      <input type="button" class="button" value="START" onclick="pumpStartStop()" id="pumpStartStopButton">
+                  </p>  
+                   <p class="switch">
+                       <progress id="pumpRuntime" value="0" max="900"> 0% </progress>
+                   </p> 
+                
+                <p class="card-title">Belysning</p>
+                <p class="switch">
+                    <input type="button" class="button" value="START" onclick="illumStartStop()" id="illuminationStartStopButton">
+                </p> 
+                <p class="card-title" id="turnType" >Vändställ</p>
+                <p class="switch">
+                    <input type="button" class="button" onclick="front()" value="FRAM" id="frontButton">
+                </p>  
+                  <p class="switch">
+                    <input type="button" class="button" onclick="rear()" value="BORT" id="rearButton">
+                </p>  
+                <p class="switch">
+                    <input type="button" class="button" onclick="lightsOff()" value="SLÄCK" id="lightsOff">
+                </p>  
+                <p class="version" id="totalTurns" ></p>
+                
+                <br><br />
+            </div>
+            
+            <div class="card">
+            
+                <p class="card-title">Bana</p>
+                
+                <form>
+                  <input type="checkbox" class="largerCheckbox" id="lane1" onclick="lane1Checked()" name="lane1" checked="true">
+                  <label for="lane1" class="switch" > Bana 1</label>
+                  <input type="checkbox" class="largerCheckbox" id="lane2" onclick="lane2Checked()" name="lane2" checked="true">
+                  <label for="lane2" class="switch" > Bana 2</label><br>
+                </form>
+                  
+                <br><br />
+                  
+                <p class="card-title">Nätverk</p>
+                <p class="switch">
+                    <input type="button" class="button" id="network" onclick="network()" value="Aktivera LEADER">
+                </p>  
+              
+                <p class="card-title">Omstart</p>
+                <p class="switch">
+                    <input type="button" class="button" id="reboot" onclick="reboot()" value="Starta om T1 Gateway">
+                </p> 
+                
+                <p class="card-title">Klubbintroduktion</p>
+                <p class="switch">
+                    <input type="button" class="button" id="intro" onclick="intro()" value="Spela klubbintro">
+                </p> 
+                <br><br />
+                
+            </div> 
+        </div>
+        <p class="switch"><input type="button" class="buttonGreen" value="HEM" onclick="location.href='index.html'"></p> 
+    </div>
+    <p class="version" id="versionText" ></p>
+    <br><br />
+    <script src="settingsScript.js"></script>
+</body>
+</html>
