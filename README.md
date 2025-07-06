@@ -1,2 +1,2 @@
-# T1
-SW update on T1 system
+# T2
+SW update on T2 system
